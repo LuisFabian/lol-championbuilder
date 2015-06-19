@@ -1,0 +1,63 @@
+.app-bar-main{
+  background-color: #006FDD;
+  height: 150px !important;
+}
+
+.app-bar-main h1.title{
+  color: #FFF;
+}
+
+.load-data{
+  display: table;
+  width: 100%;
+  height: 100%;
+  font-size: 75% !important;
+  color: #777;
+  text-align: center;
+}
+.load-data > div{ display: table-row; }
+.load-data > div > div{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.champions-list-conten{
+  display: none;
+}
+
+.box-champ-img-ratio{
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-position: center;
+  background-size: 45px;
+}
+
+.app-bar-vs{
+  background-color: #006FDD;
+}
+
+.app-box-img-champ{
+  background-color: #FFF;
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  border-radius: 35px;
+}
+
+.app-box-img-champ div:first-child{
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.app-bar-vs .menuSelectChamp .table-view{
+  padding-top: 5px !important;
+}
+
+.app-bar-vs .menuSelectChamp .bar{
+  height: 100px !important;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet/css/ratchet.css" rel="stylesheet">
+    <link href="css/ratchet/css/ratchet-theme-android.min.css" rel="stylesheet">
+    <link href="css/utils.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="css/ratchet/js/ratchet.js"></script>
+  </head>
+  <body>
+
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav app-bar-main">
+      <h1 class="title text-center" id="test">LoLChampionBuilder</h1>
+
+      <div class="app-bar-vs">
+
+        <a class="pull-left app-box-img-champ" id="btnSelChmp1" href="#menuSelectChamp1">
+          <div class="icon icon-plus"></div>
+          <div class="img-bg-champ"></div>
+        </a>
+        <div id="menuSelectChamp1" class="popover menuSelectChamp">
+          <div class="pos-rel bar">
+            <h1 class="title">Popover title</h1>
+            <form class="">
+              <input type="search" id="inputSearchChamp1" placeholder="Search">
+            </form>
+          </div>
+          <ul class="table-view" id="listSearchChamp1">
+            <!-- <li class="table-view-cell">Item1</li>
+            <li class="table-view-cell">Item2</li>
+            <li class="table-view-cell">Item3</li>
+            <li class="table-view-cell">Item4</li>
+            <li class="table-view-cell">Item5</li>
+            <li class="table-view-cell">Item6</li>
+            <li class="table-view-cell">Item7</li>
+            <li class="table-view-cell">Item8</li> -->
+          </ul>
+        </div>
+
+        <a class="pull-right app-box-img-champ" id="btnSelChmp2" href="#menuSelectChamp2">
+          <div class="icon icon-plus"></div>
+          <div class="img-bg-champ"></div>
+        </a>
+        <!--<div id="menuSelectChamp2" class="popover">
+          <header class="bar bar-nav">
+            <h1 class="title">Popover title</h1>
+          </header>
+          <ul class="table-view">
+            <li class="table-view-cell">Item1</li>
+            <li class="table-view-cell">Item2</li>
+            <li class="table-view-cell">Item3</li>
+            <li class="table-view-cell">Item4</li>
+            <li class="table-view-cell">Item5</li>
+            <li class="table-view-cell">Item6</li>
+            <li class="table-view-cell">Item7</li>
+            <li class="table-view-cell">Item8</li>
+          </ul>
+        </div>-->
+
+      </div>
+
+    </header>
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+
+      <!-- Comp - carga -->
+      <div class="load-data">
+        <div><div><small>Cargando...</small></div></div>
+      </div>
+      <!-- Comp - Lista de campeones -->
+      <ul class="table-view champions-list-conten"></ul>
+
+    </div>
+
+    <!-- Recursos template -->
+    <script type="text/template" id="champions_list">
+      <% _.each(champions,function(champion,i) { %>
+      <li class="table-view-cell media">
+        <a class="navigate-right">
+          <div class="pull-left box-champ-img-ratio" style="background-image:url('<%= champion.img_square %>');"></div>
+          <div class="media-body">
+            <h6><%= champion.name %></h6>
+            <p><%= champion.title %></p>
+          </div>
+        </a>
+      </li>
+      <% }); %>
+    </script>
+
+    <script type="text/javascript" src="js/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="js/libs/underscore-min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      app.initialize();
+    });
+    </script>
+
+  </body>
+</html>
