@@ -24,10 +24,18 @@
 
     <!-- Make sure all your bars are the first things in your <body> -->
     <header class="bar bar-nav app-bar-main">
-      <h1 class="title text-center" id="test">LoLChampionBuilder</h1>
 
-      <div class="app-bar-vs">
+      <div class="row">
+        <a class="icon icon-bars pull-left" id="btnMenuPrincipalApp" href="#menuPrincipalApp"></a>
+        <div id="menuPrincipalApp" class="popover menuPrincipalApp">
+          <ul class="table-view" id="listOpcionesMenu">
+            <li class="table-view-cell"><a href="#myModalexample">Campeones</a></li>
+          </ul>
+        </div>
+        <h1 class="title text-center" id="test">LoLChampionBuilder</h1>
+      </div>
 
+      <div class="row app-bar-vs">
         <a class="pull-left app-box-img-champ" id="btnSelChmp1" href="#menuSelectChamp1">
           <div class="icon icon-plus"></div>
           <div class="img-bg-champ"></div>
@@ -40,14 +48,6 @@
             </form>
           </div>
           <ul class="table-view" id="listSearchChamp1">
-            <!-- <li class="table-view-cell">Item1</li>
-            <li class="table-view-cell">Item2</li>
-            <li class="table-view-cell">Item3</li>
-            <li class="table-view-cell">Item4</li>
-            <li class="table-view-cell">Item5</li>
-            <li class="table-view-cell">Item6</li>
-            <li class="table-view-cell">Item7</li>
-            <li class="table-view-cell">Item8</li> -->
           </ul>
         </div>
 
@@ -84,6 +84,17 @@
       <!-- Comp - Lista de campeones -->
       <ul class="table-view champions-list-conten"></ul>
 
+    </div>
+
+    <div id="myModalexample" class="modal">
+      <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#myModalexample"></a>
+        <h1 class="title">Modal</h1>
+      </header>
+
+      <div class="content">
+        <p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+      </div>
     </div>
 
     <!-- Recursos template -->

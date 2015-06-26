@@ -36,7 +36,13 @@
 }
 
 .app-bar-vs{
+  border-top: 1px solid #0349B4;
   background-color: #006FDD;
+  padding-top: 8px;
+}
+
+.app-bar-main div.row a.icon-bars{
+  color: #FFF !important;
 }
 
 .app-box-img-champ{
@@ -60,4 +66,8 @@
 
 .app-bar-vs .menuSelectChamp .bar{
   height: 100px !important;
+}
+
+a.app-box-img-champ div.icon-plus{
+  z-index: 19 !important;
 }
